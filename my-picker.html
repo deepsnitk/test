@@ -1,0 +1,36 @@
+<link rel="import" href="../polymer/polymer-element.html">
+
+<dom-module id="my-picker">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello [[prop1]]!</h2>
+  </template>
+
+  <script>
+    /**
+     * `my-picker`
+     * 
+     *
+     * @customElement
+     * @polymer
+     * @demo demo/index.html
+     */
+    class MyPicker extends Polymer.Element {
+      static get is() { return 'my-picker'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'my-picker'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(MyPicker.is, MyPicker);
+  </script>
+</dom-module>
